@@ -14,13 +14,7 @@ class GameObject: Node {
     mesh = MeshLibrary.Mesh(meshType)
   }
   
-  var time: Float = 0
-  func update(deltaTime: Float) {
-    time += deltaTime
-//    position.x = sin(time)
-//    position.y = sin(time)
-    scale = float3(cos(time))
-//    rotation.z = cos(time)
+  override func update(deltaTime: Float) {
     updateModelConstant()
   }
   
