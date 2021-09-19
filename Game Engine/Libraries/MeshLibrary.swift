@@ -19,7 +19,7 @@ class MeshLibrary {
   
   private static func createDefualtMeshes() {
     meshes.updateValue(Triangle_CustomeMesh(), forKey: .Triangle_Custom)
-    meshes.updateValue(Quad_CustomeMesh(), forKey: .Quad_Custom)
+    meshes.updateValue(Quad_CustomMesh(), forKey: .Quad_Custom)
   }
   
   public static func Mesh(_ meshType: MeshTypes) -> Mesh {
@@ -63,15 +63,15 @@ class Triangle_CustomeMesh: CustomMesh {
   }
 }
 
-class Quad_CustomeMesh: CustomMesh {
+class Quad_CustomMesh: CustomMesh {
   override func createVertices() {
     vertices = [
-      Vertex(position: float3(0.5,0.5,0), color: float4(1,0,0,1)), // top right
-      Vertex(position: float3(-0.5,0.5,0), color: float4(0,1,0,1)), // top left
-      Vertex(position: float3(-0.5,-0.5,0), color: float4(0,0,1,1)), // bottom left
-      Vertex(position: float3(0.5,0.5,0), color: float4(1,0,0,1)), // top right
-      Vertex(position: float3(-0.5,-0.5,0), color: float4(0,0,1,1)), // bottom left
-      Vertex(position: float3(0.5,-0.5,0), color: float4(1,0,1,1)) // bottom right
+      Vertex(position: float3( 1, 1,0), color: float4(1,0,0,1)), //Top Right
+      Vertex(position: float3(-1, 1,0), color: float4(0,1,0,1)), //Top Left
+      Vertex(position: float3(-1,-1,0), color: float4(0,0,1,1)),  //Bottom Left
+      Vertex(position: float3( 1, 1,0), color: float4(1,0,0,1)), //Top Right
+      Vertex(position: float3(-1,-1,0), color: float4(0,0,1,1)), //Bottom Left
+      Vertex(position: float3( 1,-1,0), color: float4(1,0,1,1))  //Bottom Right
     ]
   }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1AD97426F6FFF0009F3C11 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD97326F6FFF0009F3C11 /* Math.swift */; };
 		AF3CE31F26DB588C005F8070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CE31E26DB588C005F8070 /* AppDelegate.swift */; };
 		AF3CE32126DB588C005F8070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CE32026DB588C005F8070 /* ViewController.swift */; };
 		AF3CE32426DB588C005F8070 /* Game_Engine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF3CE32226DB588C005F8070 /* Game_Engine.xcdatamodeld */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1AD97326F6FFF0009F3C11 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		AF3CE31B26DB588C005F8070 /* Game Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3CE31E26DB588C005F8070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3CE32026DB588C005F8070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1AD97226F6FFC5009F3C11 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				AF1AD97326F6FFF0009F3C11 /* Math.swift */,
+			);
+			path = Maths;
+			sourceTree = "<group>";
+		};
 		AF3CE31226DB588C005F8070 = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +239,7 @@
 		AFDC3C0226F1CDC20059AEDA /* Game Shizz */ = {
 			isa = PBXGroup;
 			children = (
+				AF1AD97226F6FFC5009F3C11 /* Maths */,
 				AF74A2B126F3200100436AAD /* Game Objects */,
 				AF74A2A826F31F5B00436AAD /* Protocols */,
 				AF74A2A326F31E9500436AAD /* Node.swift */,
@@ -379,6 +390,7 @@
 				AF74A2A426F31E9500436AAD /* Node.swift in Sources */,
 				AFDC3BFE26EDE2210059AEDA /* RenderPipelineStateLibrary.swift in Sources */,
 				AF3CE37B26DDFC6E005F8070 /* MyShaders.metal in Sources */,
+				AF1AD97426F6FFF0009F3C11 /* Math.swift in Sources */,
 				AF3CE32426DB588C005F8070 /* Game_Engine.xcdatamodeld in Sources */,
 				AF87147726EA055E00DB4024 /* Preferences.swift in Sources */,
 				AFDC3BF926EDE0420059AEDA /* RenderPipelineDescriptorLibrary.swift in Sources */,
