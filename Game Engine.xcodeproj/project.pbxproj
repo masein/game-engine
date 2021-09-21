@@ -11,6 +11,9 @@
 		AF1AD97A26F7443C009F3C11 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD97926F7443C009F3C11 /* Scene.swift */; };
 		AF1AD97F26F746A3009F3C11 /* SandboxScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD97E26F746A3009F3C11 /* SandboxScene.swift */; };
 		AF1AD98526F749BD009F3C11 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD98426F749BD009F3C11 /* SceneManager.swift */; };
+		AF1AD98E26F8BB14009F3C11 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD98D26F8BB14009F3C11 /* Keyboard.swift */; };
+		AF1AD99326F99426009F3C11 /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD99226F99426009F3C11 /* KeyCodes.swift */; };
+		AF1AD99826F99994009F3C11 /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD99726F99994009F3C11 /* Mouse.swift */; };
 		AF3CE31F26DB588C005F8070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CE31E26DB588C005F8070 /* AppDelegate.swift */; };
 		AF3CE32126DB588C005F8070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CE32026DB588C005F8070 /* ViewController.swift */; };
 		AF3CE32426DB588C005F8070 /* Game_Engine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF3CE32226DB588C005F8070 /* Game_Engine.xcdatamodeld */; };
@@ -57,6 +60,9 @@
 		AF1AD97926F7443C009F3C11 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		AF1AD97E26F746A3009F3C11 /* SandboxScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxScene.swift; sourceTree = "<group>"; };
 		AF1AD98426F749BD009F3C11 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		AF1AD98D26F8BB14009F3C11 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		AF1AD99226F99426009F3C11 /* KeyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
+		AF1AD99726F99994009F3C11 /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
 		AF3CE31B26DB588C005F8070 /* Game Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Engine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3CE31E26DB588C005F8070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3CE32026DB588C005F8070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +142,16 @@
 				AF1AD98426F749BD009F3C11 /* SceneManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		AF1AD98C26F8BB02009F3C11 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				AF1AD98D26F8BB14009F3C11 /* Keyboard.swift */,
+				AF1AD99726F99994009F3C11 /* Mouse.swift */,
+				AF1AD99226F99426009F3C11 /* KeyCodes.swift */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 		AF3CE31226DB588C005F8070 = {
@@ -223,6 +239,7 @@
 		AF87146226E9F16600DB4024 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AF1AD98C26F8BB02009F3C11 /* Input */,
 				AF60A16F26E884A700B0F9DF /* Types.swift */,
 				AF87147126E9F31300DB4024 /* Engine.swift */,
 				AF87147626EA055E00DB4024 /* Preferences.swift */,
@@ -401,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1AD99326F99426009F3C11 /* KeyCodes.swift in Sources */,
 				AF3CE32126DB588C005F8070 /* ViewController.swift in Sources */,
 				AF87147C26EA08FE00DB4024 /* ShaderLibrary.swift in Sources */,
 				AFDC3C0C26F2179A0059AEDA /* Renderer.swift in Sources */,
@@ -420,6 +438,8 @@
 				AF1AD98526F749BD009F3C11 /* SceneManager.swift in Sources */,
 				AF3CE32426DB588C005F8070 /* Game_Engine.xcdatamodeld in Sources */,
 				AF87147726EA055E00DB4024 /* Preferences.swift in Sources */,
+				AF1AD98E26F8BB14009F3C11 /* Keyboard.swift in Sources */,
+				AF1AD99826F99994009F3C11 /* Mouse.swift in Sources */,
 				AFDC3BF926EDE0420059AEDA /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				AF1AD97F26F746A3009F3C11 /* SandboxScene.swift in Sources */,
 				AF87147226E9F31300DB4024 /* Engine.swift in Sources */,

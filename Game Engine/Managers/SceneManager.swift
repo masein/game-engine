@@ -24,7 +24,7 @@ class SceneManager {
     }
   }
   
-  public static func TikScene(renderCommandEncoder: MTLRenderCommandEncoder, deltaTime: Float) {
+  public static func TickScene(renderCommandEncoder: MTLRenderCommandEncoder, deltaTime: Float) {
     _currentScene.render(renderCommandEncoder: renderCommandEncoder)
     _currentScene.update(deltaTime: deltaTime)
   }
