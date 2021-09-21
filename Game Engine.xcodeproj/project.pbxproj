@@ -25,9 +25,12 @@
 		AF3CE37B26DDFC6E005F8070 /* MyShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF3CE37A26DDFC6E005F8070 /* MyShaders.metal */; };
 		AF60A17026E884A700B0F9DF /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60A16F26E884A700B0F9DF /* Types.swift */; };
 		AF74A29A26F309C500436AAD /* MeshLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74A29926F309C500436AAD /* MeshLibrary.swift */; };
-		AF74A29F26F31DF100436AAD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74A29E26F31DF100436AAD /* Player.swift */; };
+		AF74A29F26F31DF100436AAD /* Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74A29E26F31DF100436AAD /* Pointer.swift */; };
 		AF74A2A426F31E9500436AAD /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74A2A326F31E9500436AAD /* Node.swift */; };
 		AF74A2AA26F31F6D00436AAD /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74A2A926F31F6D00436AAD /* Renderable.swift */; };
+		AF7E845E26F9F5EC0077A735 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E845D26F9F5EC0077A735 /* Camera.swift */; };
+		AF7E846626F9FF800077A735 /* DebugCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E846526F9FF7F0077A735 /* DebugCamera.swift */; };
+		AF7E846B26FA04600077A735 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7E846A26FA04600077A735 /* CameraManager.swift */; };
 		AF87147226E9F31300DB4024 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF87147126E9F31300DB4024 /* Engine.swift */; };
 		AF87147726EA055E00DB4024 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF87147626EA055E00DB4024 /* Preferences.swift */; };
 		AF87147C26EA08FE00DB4024 /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF87147B26EA08FE00DB4024 /* ShaderLibrary.swift */; };
@@ -81,9 +84,12 @@
 		AF3CE37A26DDFC6E005F8070 /* MyShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyShaders.metal; sourceTree = "<group>"; };
 		AF60A16F26E884A700B0F9DF /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		AF74A29926F309C500436AAD /* MeshLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshLibrary.swift; sourceTree = "<group>"; };
-		AF74A29E26F31DF100436AAD /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AF74A29E26F31DF100436AAD /* Pointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointer.swift; sourceTree = "<group>"; };
 		AF74A2A326F31E9500436AAD /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		AF74A2A926F31F6D00436AAD /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		AF7E845D26F9F5EC0077A735 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		AF7E846526F9FF7F0077A735 /* DebugCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugCamera.swift; sourceTree = "<group>"; };
+		AF7E846A26FA04600077A735 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		AF87147126E9F31300DB4024 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		AF87147626EA055E00DB4024 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		AF87147B26EA08FE00DB4024 /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1AD98426F749BD009F3C11 /* SceneManager.swift */,
+				AF7E846A26FA04600077A735 /* CameraManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -231,9 +238,18 @@
 			isa = PBXGroup;
 			children = (
 				AFDC3C0326F1CDDF0059AEDA /* GameObject.swift */,
-				AF74A29E26F31DF100436AAD /* Player.swift */,
+				AF74A29E26F31DF100436AAD /* Pointer.swift */,
 			);
 			path = "Game Objects";
+			sourceTree = "<group>";
+		};
+		AF7E845C26F9F5E20077A735 /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				AF7E845D26F9F5EC0077A735 /* Camera.swift */,
+				AF7E846526F9FF7F0077A735 /* DebugCamera.swift */,
+			);
+			path = Cameras;
 			sourceTree = "<group>";
 		};
 		AF87146226E9F16600DB4024 /* Core */ = {
@@ -280,6 +296,7 @@
 		AFDC3C0226F1CDC20059AEDA /* Game Shizz */ = {
 			isa = PBXGroup;
 			children = (
+				AF7E845C26F9F5E20077A735 /* Cameras */,
 				AF1AD97826F7442A009F3C11 /* Scenes */,
 				AF1AD97226F6FFC5009F3C11 /* Maths */,
 				AF74A2B126F3200100436AAD /* Game Objects */,
@@ -423,11 +440,13 @@
 				AF87147C26EA08FE00DB4024 /* ShaderLibrary.swift in Sources */,
 				AFDC3C0C26F2179A0059AEDA /* Renderer.swift in Sources */,
 				AF74A2AA26F31F6D00436AAD /* Renderable.swift in Sources */,
+				AF7E846626F9FF800077A735 /* DebugCamera.swift in Sources */,
 				AF3CE31F26DB588C005F8070 /* AppDelegate.swift in Sources */,
-				AF74A29F26F31DF100436AAD /* Player.swift in Sources */,
+				AF74A29F26F31DF100436AAD /* Pointer.swift in Sources */,
 				AF3CE37626DB5C4A005F8070 /* GameView.swift in Sources */,
 				AFDC3C0426F1CDDF0059AEDA /* GameObject.swift in Sources */,
 				AF74A29A26F309C500436AAD /* MeshLibrary.swift in Sources */,
+				AF7E845E26F9F5EC0077A735 /* Camera.swift in Sources */,
 				AFDC3BF426EDDAAF0059AEDA /* VertexDescriptorLibrary.swift in Sources */,
 				AF60A17026E884A700B0F9DF /* Types.swift in Sources */,
 				AF74A2A426F31E9500436AAD /* Node.swift in Sources */,
@@ -438,6 +457,7 @@
 				AF1AD98526F749BD009F3C11 /* SceneManager.swift in Sources */,
 				AF3CE32426DB588C005F8070 /* Game_Engine.xcdatamodeld in Sources */,
 				AF87147726EA055E00DB4024 /* Preferences.swift in Sources */,
+				AF7E846B26FA04600077A735 /* CameraManager.swift in Sources */,
 				AF1AD98E26F8BB14009F3C11 /* Keyboard.swift in Sources */,
 				AF1AD99826F99994009F3C11 /* Mouse.swift in Sources */,
 				AFDC3BF926EDE0420059AEDA /* RenderPipelineDescriptorLibrary.swift in Sources */,
