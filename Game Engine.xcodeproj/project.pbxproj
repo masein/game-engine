@@ -34,6 +34,8 @@
 		AF87147226E9F31300DB4024 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF87147126E9F31300DB4024 /* Engine.swift */; };
 		AF87147726EA055E00DB4024 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF87147626EA055E00DB4024 /* Preferences.swift */; };
 		AF87147C26EA08FE00DB4024 /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF87147B26EA08FE00DB4024 /* ShaderLibrary.swift */; };
+		AFA47C3926FC5B3E006CD0CB /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA47C3826FC5B3E006CD0CB /* Cube.swift */; };
+		AFA47C3E26FC5F33006CD0CB /* DepthStencilStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA47C3D26FC5F33006CD0CB /* DepthStencilStateLibrary.swift */; };
 		AFDC3BF426EDDAAF0059AEDA /* VertexDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC3BF326EDDAAF0059AEDA /* VertexDescriptorLibrary.swift */; };
 		AFDC3BF926EDE0420059AEDA /* RenderPipelineDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC3BF826EDE0420059AEDA /* RenderPipelineDescriptorLibrary.swift */; };
 		AFDC3BFE26EDE2210059AEDA /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC3BFD26EDE2210059AEDA /* RenderPipelineStateLibrary.swift */; };
@@ -93,6 +95,8 @@
 		AF87147126E9F31300DB4024 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		AF87147626EA055E00DB4024 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		AF87147B26EA08FE00DB4024 /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
+		AFA47C3826FC5B3E006CD0CB /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		AFA47C3D26FC5F33006CD0CB /* DepthStencilStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthStencilStateLibrary.swift; sourceTree = "<group>"; };
 		AFDC3BF326EDDAAF0059AEDA /* VertexDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorLibrary.swift; sourceTree = "<group>"; };
 		AFDC3BF826EDE0420059AEDA /* RenderPipelineDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineDescriptorLibrary.swift; sourceTree = "<group>"; };
 		AFDC3BFD26EDE2210059AEDA /* RenderPipelineStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLibrary.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 			children = (
 				AFDC3C0326F1CDDF0059AEDA /* GameObject.swift */,
 				AF74A29E26F31DF100436AAD /* Pointer.swift */,
+				AFA47C3826FC5B3E006CD0CB /* Cube.swift */,
 			);
 			path = "Game Objects";
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				AFDC3BF826EDE0420059AEDA /* RenderPipelineDescriptorLibrary.swift */,
 				AFDC3BFD26EDE2210059AEDA /* RenderPipelineStateLibrary.swift */,
 				AF74A29926F309C500436AAD /* MeshLibrary.swift */,
+				AFA47C3D26FC5F33006CD0CB /* DepthStencilStateLibrary.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -437,7 +443,9 @@
 			files = (
 				AF1AD99326F99426009F3C11 /* KeyCodes.swift in Sources */,
 				AF3CE32126DB588C005F8070 /* ViewController.swift in Sources */,
+				AFA47C3E26FC5F33006CD0CB /* DepthStencilStateLibrary.swift in Sources */,
 				AF87147C26EA08FE00DB4024 /* ShaderLibrary.swift in Sources */,
+				AFA47C3926FC5B3E006CD0CB /* Cube.swift in Sources */,
 				AFDC3C0C26F2179A0059AEDA /* Renderer.swift in Sources */,
 				AF74A2AA26F31F6D00436AAD /* Renderable.swift in Sources */,
 				AF7E846626F9FF800077A735 /* DebugCamera.swift in Sources */,
