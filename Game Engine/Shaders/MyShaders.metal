@@ -4,13 +4,12 @@
 //
 //  Created by Masein Mody on 31/08/2021.
 //
-
 #include <metal_stdlib>
 using namespace metal;
 
 struct VertexIn {
-  float3 position[[attribute(0)]];
-  float4 color[[attribute(1)]];
+  float3 position [[attribute(0)]];
+  float4 color [[attribute(1)]];
 };
 
 struct RasterizerData {
@@ -37,6 +36,17 @@ vertex RasterizerData basic_vertex_shader(const VertexIn vIn [[stage_in]],
                                           constant ModelConstants &modelConstants [[buffer(2)]]) {
   RasterizerData rd;
   rd.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * modelConstants.modelMatrix * float4(vIn.position, 1);
+  rd.color = vIn.color;
+  return rd;
+}
+
+vertex RasterizerData instanced_vertex_shader(const VertexIn vIn [[ stage_in ]],
+                                              constant SceneConstants &sceneConstants [[ buffer(1) ]],
+                                              constant ModelConstants *modelConstants [[ buffer(2) ]],
+                                              uint instanceId [[ instance_id ]]){
+  RasterizerData rd;
+  ModelConstants modelConstant = modelConstants[instanceId];
+  rd.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * modelConstant.modelMatrix * float4(vIn.position, 1);
   rd.color = vIn.color;
   return rd;
 }
