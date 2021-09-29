@@ -10,8 +10,8 @@ class Scene: Node {
   var cameraManager = CameraManager()
   var sceneConstants = SceneConstants()
   
-  override init() {
-    super.init()
+  init() {
+    super.init(name: "Scene")
     buildScene()
   }
   
@@ -29,13 +29,13 @@ class Scene: Node {
     sceneConstants.projectionMatrix = cameraManager.currentCamera.projectionMatrix
   }
   
-  func updateCameras(deltaTime: Float) {
-    cameraManager.update(deltaTime: deltaTime)
+  func updateCameras() {
+    cameraManager.update()
   }
   
-  override func update(deltaTime: Float) {
+  override func update() {
     updateSceneConstants()
-    super.update(deltaTime: deltaTime)
+    super.update()
   }
   
   override func render(renderCommandEncoder: MTLRenderCommandEncoder) {

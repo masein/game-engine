@@ -21,6 +21,7 @@ class GameView: MTKView {
   }
 }
 
+//--- Keyboard Input ---
 extension GameView {
   override var acceptsFirstResponder: Bool { return true }
   
@@ -33,6 +34,7 @@ extension GameView {
   }
 }
 
+//--- Mouse Button Input ---
 extension GameView {
   override func mouseDown(with event: NSEvent) {
     Mouse.SetMouseButtonPressed(button: event.buttonNumber, isOn: true)
@@ -59,6 +61,7 @@ extension GameView {
   }
 }
 
+// --- Mouse Movement ---
 extension GameView {
   override func mouseMoved(with event: NSEvent) {
     setMousePositionChanged(event: event)
@@ -98,5 +101,4 @@ extension GameView {
                               userInfo: nil)
     addTrackingArea(area)
   }
-  
 }

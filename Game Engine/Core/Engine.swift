@@ -9,16 +9,14 @@ import MetalKit
 class Engine {
   public static var Device: MTLDevice!
   public static var CommandQueue: MTLCommandQueue!
+  public static var DefaultLibrary: MTLLibrary!
   
-  public static func Ignite(device: MTLDevice) {
+  public static func Ignite(device: MTLDevice){
     Device = device
     CommandQueue = device.makeCommandQueue()
-    ShaderLibrary.Initialize()
-    VertexDescriptorLibrary.Initialize()
-    DepthStencilStateLibrary.Intitialize()
-    RenderPipelineDescriptorLibrary.Initialize()
-    RenderPipelineStateLibrary.Initialize()
-    MeshLibrary.Initialize()
+    DefaultLibrary = device.makeDefaultLibrary()
+    Graphics.Initialize()
+    Entities.Initialize()
     SceneManager.Initialize(Preferences.StartingSceneType)
   }
 }

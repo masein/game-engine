@@ -9,19 +9,18 @@ import MetalKit
 class Renderer: NSObject {
   public static var ScreenSize = float2(0,0)
   public static var AspectRatio: Float {
-    ScreenSize.x/ScreenSize.y
+    return ScreenSize.x / ScreenSize.y
   }
   
   init(_ mtkView: MTKView) {
     super.init()
     updateScreenSize(view: mtkView)
   }
-  
 }
 
-extension Renderer: MTKViewDelegate{
+extension Renderer: MTKViewDelegate {
   
-  public func updateScreenSize(view: MTKView){
+  public func updateScreenSize(view: MTKView) {
     Renderer.ScreenSize = float2(Float(view.bounds.width), Float(view.bounds.height))
   }
   
@@ -30,16 +29,20 @@ extension Renderer: MTKViewDelegate{
   }
   
   func draw(in view: MTKView) {
-    guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
+    guard let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
     
     let commandBuffer = Engine.CommandQueue.makeCommandBuffer()
-    let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+    commandBuffer?.label = "My Command Buffer"
     
+    let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+    renderCommandEncoder?.label = "First Render Command Encoder"
+    
+    renderCommandEncoder?.pushDebugGroup("Starting Render")
     SceneManager.TickScene(renderCommandEncoder: renderCommandEncoder!, deltaTime: 1 / Float(view.preferredFramesPerSecond))
+    renderCommandEncoder?.popDebugGroup()
     
     renderCommandEncoder?.endEncoding()
-    commandBuffer?.present(drawable)
+    commandBuffer?.present(view.currentDrawable!)
     commandBuffer?.commit()
   }
-  
 }

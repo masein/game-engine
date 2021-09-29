@@ -7,15 +7,17 @@
 import MetalKit
 
 class Pointer: GameObject {
-  private var camera: Camera
+  
+  private var camera: Camera!
   init(camera: Camera) {
-    self.camera = camera
     super.init(meshType: .Triangle_Custom)
+    self.camera = camera
+    setName("Pointer")
   }
   
-  override func update(deltaTime: Float) {
-    rotation.z = -atan2f(Mouse.GetMouseViewportPosition().x - position.x + camera.position.x,
-                         Mouse.GetMouseViewportPosition().y - position.y + camera.position.y)
-    super.update(deltaTime: deltaTime)
+  override func doUpdate() {
+    rotateZ(-atan2f(Mouse.GetMouseViewportPosition().x - getPositionX() + camera.getPositionX(),
+                    Mouse.GetMouseViewportPosition().y - getPositionY() + camera.getPositionY()))
+    
   }
 }

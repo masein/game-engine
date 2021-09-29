@@ -5,7 +5,7 @@
 //  Created by Masein Mody on 21/09/2021.
 //
 class CameraManager {
-  private var _cameras: [CameraTypes: Camera] = [:]
+  private var _cameras: [CameraTypes : Camera] = [:]
   public var currentCamera: Camera!
   
   public func registerCamera(camera: Camera) {
@@ -16,9 +16,9 @@ class CameraManager {
     currentCamera = _cameras[cameraType]
   }
   
-  internal func update(deltaTime: Float) {
+  internal func update() {
     for camera in _cameras.values {
-      camera.update(deltaTime: deltaTime)
+      camera.update()
     }
   }
 }

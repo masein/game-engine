@@ -1,34 +1,32 @@
 //
-//  Types.swift
+//  MetalTypes.swift
 //  Game Engine
 //
-//  Created by Masein Mody on 08/09/2021.
+//  Created by Masein Mody on 29/09/2021.
 //
 import simd
 
-protocol sizeable {
-}
-
+protocol sizeable{ }
 extension sizeable {
   static var size: Int {
     return MemoryLayout<Self>.size
   }
+  
   static var stride: Int {
     return MemoryLayout<Self>.stride
   }
+  
   static func size(_ count: Int) -> Int {
     return MemoryLayout<Self>.size * count
   }
+  
   static func stride(_ count: Int) -> Int {
     return MemoryLayout<Self>.stride * count
   }
 }
 
-extension Float: sizeable {  }
-
-extension float3: sizeable {  }
-
-extension float4: sizeable {  }
+extension Float: sizeable { }
+extension float3: sizeable { }
 
 struct Vertex: sizeable {
   var position: float3
@@ -45,6 +43,6 @@ struct SceneConstants: sizeable {
 }
 
 struct Material: sizeable {
-  var color = float4(0.8,0.8,0.8,1.0)
+  var color = float4(0.8, 0.8, 0.8, 1.0)
   var useMaterialColor: Bool = false
 }

@@ -7,36 +7,40 @@
 import MetalKit
 
 class GameObject: Node {
-  var mesh: Mesh!
-  private var material = Material()
   var modelConstants = ModelConstants()
+  private var material = Material()
+  var mesh: Mesh!
   
   init(meshType: MeshTypes) {
-    mesh = MeshLibrary.Mesh(meshType)
+    mesh = Entities.Meshes[meshType]
   }
   
-  override func update(deltaTime: Float) {
-    updateModelConstant()
+  override func update() {
+    updateModelConstants()
+    super.update()
   }
   
-  private func updateModelConstant() {
-    modelConstants.modelMatrix = self.modelMatrix
+  private func updateModelConstants() {
+    modelConstants.modelMatrix = modelMatrix
   }
 }
 
 extension GameObject: Renderable {
   func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder) {
-    renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
-    renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
-    // Vertex Shader
-    renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
+    renderCommandEncoder.setRenderPipelineState(Graphics.RenderPipelineStates[.Basic])
+    renderCommandEncoder.setDepthStencilState(Graphics.DepthStencilStates[.Less])
+    
+    //Vertex Shader
     renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
-    // Fragment Shader
+    
+    //Fragment Shader
     renderCommandEncoder.setFragmentBytes(&material, length: Material.stride, index: 1)
+    
     mesh.drawPrimitives(renderCommandEncoder)
   }
 }
 
+//Material Properties
 extension GameObject {
   public func setColor(_ color: float4) {
     material.color = color
