@@ -55,6 +55,10 @@
 		AFEF411D2709A09B0001EEFA /* PartyPirateParot.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEF411C2709A09B0001EEFA /* PartyPirateParot.png */; };
 		AFEF41222709A61C0001EEFA /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF41212709A61C0001EEFA /* TextureLibrary.swift */; };
 		AFEF4127270AD4AA0001EEFA /* SamplerStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF4126270AD4AA0001EEFA /* SamplerStateLibrary.swift */; };
+		AFEF412F27118F670001EEFA /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = AFEF412C27118F660001EEFA /* cruiser.mtl */; };
+		AFEF413027118F670001EEFA /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = AFEF412D27118F670001EEFA /* cruiser.bmp */; };
+		AFEF413127118F670001EEFA /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = AFEF412E27118F670001EEFA /* cruiser.obj */; };
+		AFEF41362711932E0001EEFA /* Cruiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF41352711932E0001EEFA /* Cruiser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,10 @@
 		AFEF411C2709A09B0001EEFA /* PartyPirateParot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PartyPirateParot.png; sourceTree = "<group>"; };
 		AFEF41212709A61C0001EEFA /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
 		AFEF4126270AD4AA0001EEFA /* SamplerStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerStateLibrary.swift; sourceTree = "<group>"; };
+		AFEF412C27118F660001EEFA /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
+		AFEF412D27118F670001EEFA /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
+		AFEF412E27118F670001EEFA /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
+		AFEF41352711932E0001EEFA /* Cruiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cruiser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +340,7 @@
 			children = (
 				AFDC3C0326F1CDDF0059AEDA /* GameObject.swift */,
 				AFE28D732700472800324681 /* InstancedGameObject.swift */,
+				AFEF41352711932E0001EEFA /* Cruiser.swift */,
 				AFE28D7B2702EA2100324681 /* CubeCollection.swift */,
 				AF74A29E26F31DF100436AAD /* Pointer.swift */,
 				AFA47C3826FC5B3E006CD0CB /* Cube.swift */,
@@ -397,9 +406,20 @@
 		AFEF411B2709A0070001EEFA /* res */ = {
 			isa = PBXGroup;
 			children = (
+				AFEF412B27118F4C0001EEFA /* cruiser */,
 				AFEF411C2709A09B0001EEFA /* PartyPirateParot.png */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		AFEF412B27118F4C0001EEFA /* cruiser */ = {
+			isa = PBXGroup;
+			children = (
+				AFEF412D27118F670001EEFA /* cruiser.bmp */,
+				AFEF412C27118F660001EEFA /* cruiser.mtl */,
+				AFEF412E27118F670001EEFA /* cruiser.obj */,
+			);
+			path = cruiser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +528,9 @@
 				AF3CE32626DB5890005F8070 /* Assets.xcassets in Resources */,
 				AF3CE32926DB5890005F8070 /* Main.storyboard in Resources */,
 				AFEF411D2709A09B0001EEFA /* PartyPirateParot.png in Resources */,
+				AFEF412F27118F670001EEFA /* cruiser.mtl in Resources */,
+				AFEF413027118F670001EEFA /* cruiser.bmp in Resources */,
+				AFEF413127118F670001EEFA /* cruiser.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +564,7 @@
 				AF7E846626F9FF800077A735 /* DebugCamera.swift in Sources */,
 				AF38CE46270436F2005D045B /* RenderPipelineStateLibrary.swift in Sources */,
 				AF3CE31F26DB588C005F8070 /* AppDelegate.swift in Sources */,
+				AFEF41362711932E0001EEFA /* Cruiser.swift in Sources */,
 				AF74A29F26F31DF100436AAD /* Pointer.swift in Sources */,
 				AF3CE37626DB5C4A005F8070 /* GameView.swift in Sources */,
 				AFDC3C0426F1CDDF0059AEDA /* GameObject.swift in Sources */,
