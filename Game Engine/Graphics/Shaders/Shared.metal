@@ -35,3 +35,7 @@ struct Material {
   bool useMaterialColor;
   bool useTexture;
 };
+
+struct LightData {
+  float3 position;
+};

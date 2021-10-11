@@ -14,6 +14,8 @@
 		AF1AD98E26F8BB14009F3C11 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD98D26F8BB14009F3C11 /* Keyboard.swift */; };
 		AF1AD99326F99426009F3C11 /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD99226F99426009F3C11 /* KeyCodes.swift */; };
 		AF1AD99826F99994009F3C11 /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD99726F99994009F3C11 /* Mouse.swift */; };
+		AF1C57BB2714002E00301EEF /* LightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C57BA2714002E00301EEF /* LightManager.swift */; };
+		AF1C57C02714040900301EEF /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C57BF2714040900301EEF /* Sun.swift */; };
 		AF38CDE027043053005D045B /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38CDDF27043053005D045B /* GameTime.swift */; };
 		AF38CDE6270430DD005D045B /* MetalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38CDE5270430DD005D045B /* MetalTypes.swift */; };
 		AF38CDEE27043184005D045B /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38CDED27043184005D045B /* Library.swift */; };
@@ -59,6 +61,7 @@
 		AFEF413027118F670001EEFA /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = AFEF412D27118F670001EEFA /* cruiser.bmp */; };
 		AFEF413127118F670001EEFA /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = AFEF412E27118F670001EEFA /* cruiser.obj */; };
 		AFEF41362711932E0001EEFA /* Cruiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF41352711932E0001EEFA /* Cruiser.swift */; };
+		AFEF413E2712FCAD0001EEFA /* LightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF413D2712FCAC0001EEFA /* LightObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,8 @@
 		AF1AD98D26F8BB14009F3C11 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		AF1AD99226F99426009F3C11 /* KeyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
 		AF1AD99726F99994009F3C11 /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
+		AF1C57BA2714002E00301EEF /* LightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightManager.swift; sourceTree = "<group>"; };
+		AF1C57BF2714040900301EEF /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 		AF38CDDF27043053005D045B /* GameTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTime.swift; sourceTree = "<group>"; };
 		AF38CDE5270430DD005D045B /* MetalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalTypes.swift; sourceTree = "<group>"; };
 		AF38CDED27043184005D045B /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
@@ -138,6 +143,7 @@
 		AFEF412D27118F670001EEFA /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
 		AFEF412E27118F670001EEFA /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
 		AFEF41352711932E0001EEFA /* Cruiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cruiser.swift; sourceTree = "<group>"; };
+		AFEF413D2712FCAC0001EEFA /* LightObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 			children = (
 				AF1AD98426F749BD009F3C11 /* SceneManager.swift */,
 				AF7E846A26FA04600077A735 /* CameraManager.swift */,
+				AF1C57BA2714002E00301EEF /* LightManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -339,7 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				AFDC3C0326F1CDDF0059AEDA /* GameObject.swift */,
+				AFEF413D2712FCAC0001EEFA /* LightObject.swift */,
 				AFE28D732700472800324681 /* InstancedGameObject.swift */,
+				AF1C57BF2714040900301EEF /* Sun.swift */,
 				AFEF41352711932E0001EEFA /* Cruiser.swift */,
 				AFE28D7B2702EA2100324681 /* CubeCollection.swift */,
 				AF74A29E26F31DF100436AAD /* Pointer.swift */,
@@ -584,9 +593,11 @@
 				AF38CDFF27043384005D045B /* MeshLibrary.swift in Sources */,
 				AF38CE05270433E8005D045B /* Graphics.swift in Sources */,
 				AFEF4127270AD4AA0001EEFA /* SamplerStateLibrary.swift in Sources */,
+				AFEF413E2712FCAD0001EEFA /* LightObject.swift in Sources */,
 				AF38CE41270436B7005D045B /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				AF38CE4B2704375B005D045B /* DepthStencilStateLibrary.swift in Sources */,
 				AF1AD98526F749BD009F3C11 /* SceneManager.swift in Sources */,
+				AF1C57C02714040900301EEF /* Sun.swift in Sources */,
 				AF38CE6627043DBC005D045B /* Quad.swift in Sources */,
 				AF3CE32426DB588C005F8070 /* Game_Engine.xcdatamodeld in Sources */,
 				AF38CE3727043540005D045B /* FragmentShaderLibrary.swift in Sources */,
@@ -598,6 +609,7 @@
 				AF1AD97F26F746A3009F3C11 /* SandboxScene.swift in Sources */,
 				AF38CE59270438FA005D045B /* BasicShaders.metal in Sources */,
 				AFE28D742700472800324681 /* InstancedGameObject.swift in Sources */,
+				AF1C57BB2714002E00301EEF /* LightManager.swift in Sources */,
 				AF87147226E9F31300DB4024 /* Engine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
