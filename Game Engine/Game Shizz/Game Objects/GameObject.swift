@@ -47,7 +47,7 @@ extension GameObject: Renderable {
 
 //Material Properties
 extension GameObject {
-  public func setColor(_ color: float4) {
+  public func setMaterialColor(_ color: float4) {
     material.color = color
     material.useMaterialColor = true
     material.useTexture = false
@@ -58,4 +58,14 @@ extension GameObject {
     material.useTexture = true
     material.useMaterialColor = false
   }
+  
+  // Is Lit
+  public func setMaterialIsLit(_ isLit: Bool) { material.isLit = isLit }
+  public func getMaterialIsLit() -> Bool { return material.isLit }
+  
+  // Ambient
+  public func setMaterialAmbient(_ ambient: float3) { material.ambient = ambient }
+  public func setMaterialAmbient(_ ambient: Float) { material.ambient = float3(ambient, ambient, ambient) }
+  public func addMaterialAmbient(_ value: Float) { material.ambient += value }
+  public func getMaterialAmbient() -> float3 { return material.ambient }
 }

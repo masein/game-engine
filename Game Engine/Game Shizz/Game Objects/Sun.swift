@@ -9,7 +9,7 @@ import simd
 class Sun: LightObject {
   init() {
     super.init(meshType: .Sphere, name: "Sun")
-    setColor(float4(0.5, 0.5, 0, 1.0))
+    setMaterialColor(float4(0.5, 0.5, 0, 1.0))
     setScale(0.3)
   }
 }

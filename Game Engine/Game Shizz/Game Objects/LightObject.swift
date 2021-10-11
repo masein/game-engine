@@ -24,3 +24,17 @@ class LightObject: GameObject {
     super.update()
   }
 }
+
+extension LightObject {
+  // Light Color
+  public func setLightColor(_ color: float3) { lightData.color = color }
+  public func getLightColor() -> float3 { return lightData.color }
+  
+  // Light Brightness
+  public func setLightBrightness(_ brightness: Float) { lightData.brightness = brightness }
+  public func getLightBrightness() -> Float { return lightData.brightness }
+  
+  // Ambient Intensity
+  public func setLightAmbientIntensity(_ intensity: Float) { lightData.ambientIntensity = intensity }
+  public func getLightAmbientIntensity() -> Float { return lightData.ambientIntensity }
+}

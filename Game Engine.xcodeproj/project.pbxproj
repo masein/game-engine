@@ -16,6 +16,7 @@
 		AF1AD99826F99994009F3C11 /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1AD99726F99994009F3C11 /* Mouse.swift */; };
 		AF1C57BB2714002E00301EEF /* LightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C57BA2714002E00301EEF /* LightManager.swift */; };
 		AF1C57C02714040900301EEF /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C57BF2714040900301EEF /* Sun.swift */; };
+		AF302BFF27143C0500717379 /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = AF302BFE27143C0500717379 /* sphere.obj */; };
 		AF38CDE027043053005D045B /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38CDDF27043053005D045B /* GameTime.swift */; };
 		AF38CDE6270430DD005D045B /* MetalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38CDE5270430DD005D045B /* MetalTypes.swift */; };
 		AF38CDEE27043184005D045B /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38CDED27043184005D045B /* Library.swift */; };
@@ -91,6 +92,7 @@
 		AF1AD99726F99994009F3C11 /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
 		AF1C57BA2714002E00301EEF /* LightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightManager.swift; sourceTree = "<group>"; };
 		AF1C57BF2714040900301EEF /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
+		AF302BFE27143C0500717379 /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
 		AF38CDDF27043053005D045B /* GameTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTime.swift; sourceTree = "<group>"; };
 		AF38CDE5270430DD005D045B /* MetalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalTypes.swift; sourceTree = "<group>"; };
 		AF38CDED27043184005D045B /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 			children = (
 				AFEF412B27118F4C0001EEFA /* cruiser */,
 				AFEF411C2709A09B0001EEFA /* PartyPirateParot.png */,
+				AF302BFE27143C0500717379 /* sphere.obj */,
 			);
 			path = res;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF302BFF27143C0500717379 /* sphere.obj in Resources */,
 				AF3CE32626DB5890005F8070 /* Assets.xcassets in Resources */,
 				AF3CE32926DB5890005F8070 /* Main.storyboard in Resources */,
 				AFEF411D2709A09B0001EEFA /* PartyPirateParot.png in Resources */,
